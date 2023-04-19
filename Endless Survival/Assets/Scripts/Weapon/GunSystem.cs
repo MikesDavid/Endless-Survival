@@ -24,7 +24,7 @@ public class GunSystem : MonoBehaviour
     public Input fire, reload, swapMode, zoom;
 
     [Header("Graphics")]
-    public GameObject muzzleFlash, bulletHoleGraphics, ImpactGraphics;
+    public GameObject muzzleFlash, ImpactGraphics;
     public TextMeshProUGUI text;
     public Animator animator;
 
@@ -121,7 +121,7 @@ public class GunSystem : MonoBehaviour
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-             Target target = rayHit.transform.GetComponent<Target>();
+            Target target = rayHit.transform.GetComponent<Target>();
             if (target != null)
             {
                 target.TakeDamage(damage);
@@ -133,7 +133,7 @@ public class GunSystem : MonoBehaviour
         //Graphics
         if (Physics.Raycast(fpsCam.transform.position,direction, out rayHit, range, whatIsEnviroment) && !Physics.Raycast(fpsCam.transform.position, direction, range, whatIsEnemy))
         {
-            Instantiate(bulletHoleGraphics, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+            //Instantiate(bulletHoleGraphics, rayHit.point, Quaternion.LookRotation(rayHit.normal));
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         }
 

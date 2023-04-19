@@ -139,7 +139,7 @@ MonoBehaviour:
   whatIsEnviroment:
     serializedVersion: 2
     m_Bits: 2112
-  muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
-  bulletHoleGraphics: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
-  ImpactGraphics: {fileID: 32154549977547424, guid: 93c8c5627f5c9ed439c6c083f4477b74, type: 3}
+  muzzleFlash: {fileID: 1743301284569550, guid: 292b61729f76d5a40a8a239e3639fc4b, type: 3}
+  ImpactGraphics: {fileID: 7867319116946817596, guid: c0a069a3bc88b414eb6ee127d530181e, type: 3}
   text: {fileID: 3691501324948899191, guid: a56bb913f44bcca419629d538cc19d05, type: 3}
+  animator: {fileID: 0}
