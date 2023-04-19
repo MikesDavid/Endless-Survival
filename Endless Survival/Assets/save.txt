@@ -1,0 +1,1 @@
+{"level":1,"experience":0,"skillPoints":0,"unlockedSkills":[2]}
