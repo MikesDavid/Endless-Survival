@@ -7,7 +7,7 @@ public class CharacterSelection : MonoBehaviour
 {
     public GameObject[] characters;
 
-    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private StateManager levelManager;
 
     public int selectedCharacter = 0;
 
@@ -34,7 +34,7 @@ public class CharacterSelection : MonoBehaviour
     {
         //PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
 
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2, LoadSceneMode.Single);
         levelManager.CurrentScene(GameScene.Start);
 
     }

@@ -126,9 +126,10 @@ public class GunSystem : MonoBehaviour
             {
                 target.TakeDamage(damage);
                 Instantiate(ImpactGraphics, rayHit.point, Quaternion.LookRotation(rayHit.normal));
-                Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
             }
+
         }
+        Instantiate(muzzleFlash, attackPoint.position, Quaternion.LookRotation(direction));
 
         //Graphics
         if (Physics.Raycast(fpsCam.transform.position,direction, out rayHit, range, whatIsEnviroment) && !Physics.Raycast(fpsCam.transform.position, direction, range, whatIsEnemy))

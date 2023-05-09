@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,9 +9,11 @@ using UnityEngine.SceneManagement;
 public class Summary : MonoBehaviour
 {
     [SerializeField] private SaveLoad saveLoad;
-    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private StateManager levelManager;
     [SerializeField] private Timer timer;
     [SerializeField] private LevelSystemManager levelSysM;
+    [SerializeField] private DBReadWrite DBWrite;
+    [SerializeField] private LoadingScreen loadingScreen;
 
     [SerializeField] private TextMeshProUGUI summaryTxt, outcomeTxt;
 
@@ -27,7 +31,7 @@ public class Summary : MonoBehaviour
     private void Start()
     {
         scene = levelManager.State;
-        LevelManager.OnSceneChanged += LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged += LevelManager_OnSceneChanged;
 
         Outcome(scene);
 
@@ -42,20 +46,32 @@ public class Summary : MonoBehaviour
         summaryTxt.text = ("Enemyes killed: " + enemyKilled.ToString() + "\n" + 
             "Primary Weapon: " + PrimaryWeapon + "\n" +
             "Secondary Weapon: " + SecondaryWeapon + "\n" );
+
+        DBManager.primary = PrimaryWeapon; 
+        DBManager.secondary = SecondaryWeapon;
+        DBManager.tulelesido = (Timer.saveHour.ToString().PadLeft(2, '0') + ":" + Timer.saveMin.ToString().PadLeft(2, '0') + ":" + Timer.saveSec.ToString("0").PadLeft(2, '0'));
+
+        DBWrite.CallSaveData();
     }
 
 
     private void OnDestroy()
     {
-        LevelManager.OnSceneChanged -= LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged -= LevelManager_OnSceneChanged;
 
     }
     private void Outcome(GameScene state)
     {
         if (state == GameScene.Wictory)
+        {
             outcomeTxt.text = "Mission Succes";
+            DBManager.death = 0;
+        }
         else if (state == GameScene.Defeat)
+        {
             outcomeTxt.text = "Mission Failed";
+            DBManager.death = 1;
+        }
     }
     private void LevelManager_OnSceneChanged(GameScene state)
     {
@@ -67,19 +83,21 @@ public class Summary : MonoBehaviour
         SetTimerText();
 
     }
-    public void Restart()
+    public async void Restart()
     {
+
         DataPersistenceManager.instance.SaveGame();
         levelManager.CurrentScene(GameScene.Start);
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        await Task.Delay(100);
+        loadingScreen.LoadLevel(2);
 
     }
-    public void Lobby()
+    public async void Lobby()
     {
         DataPersistenceManager.instance.SaveGame();
         levelManager.CurrentScene(GameScene.Lobby);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
-
+        await Task.Delay(100);
+        loadingScreen.LoadLevel(1);
     }
     private void SetTimerText()
     {

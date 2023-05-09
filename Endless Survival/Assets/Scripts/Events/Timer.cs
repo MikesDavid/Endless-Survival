@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         StartCoroutine(DecreaseEnemy1Timer(enemy1SpawnDec));
         StartCoroutine(DecreaseEnemy2Timer(enemy2SpawnDec));
         StartCoroutine(DecreaseEnemy3Timer(enemy3SpawnDec));
-        LevelManager.OnSceneChanged += LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged += LevelManager_OnSceneChanged;
     }
 
     private void LevelManager_OnSceneChanged(GameScene state)
@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
     }
     private void OnDestroy()
     {
-        LevelManager.OnSceneChanged -= LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged -= LevelManager_OnSceneChanged;
     }
 
     // Update is called once per frame

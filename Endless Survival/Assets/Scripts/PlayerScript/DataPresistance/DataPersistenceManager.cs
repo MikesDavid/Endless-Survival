@@ -4,13 +4,14 @@ using UnityEngine;
 using System.Linq;
 using System;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("Debugging")]
     [SerializeField] private bool initializeDataIfNull = false;
     [Header("File Storage Config")]
-    [SerializeField] private string fileName;
+    [SerializeField] private string fileName = DBManager.username;
     [SerializeField] private bool useEncription;
 
     private GameData gameData;
@@ -31,21 +32,23 @@ public class DataPersistenceManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         this.DataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncription);
-
+        
     }
+
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded Called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
+        //if(DBManager.username == fileName)
+            LoadGame();
     }
 
     public void  NewGame()
@@ -62,7 +65,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
         if(this.gameData == null)
         {
-            Debug.Log("No Data was found. Initializing data to defaults.");
+            //Debug.Log("No Data was found. Initializing data to defaults.");
             NewGame();
         }
 
@@ -70,7 +73,7 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
-        Debug.Log("Loaded level = " + gameData.level);
+        //Debug.Log("Loaded level = " + gameData.level);
     }
     public void SaveGame()
     {

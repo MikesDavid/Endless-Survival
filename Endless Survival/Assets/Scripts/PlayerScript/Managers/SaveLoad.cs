@@ -9,14 +9,13 @@ using static PlayerSkills;
 
 public class SaveLoad : MonoBehaviour, IDataPersistence
 {
-    //[SerializeField] private Player player;
-    //[SerializeField] private LevelWindow levelWindow;
+
     private PlayerSkills playerSkills;
     private LevelSystem levelSystem;
     [SerializeField] private UI_SkillTree skillTree;
     [SerializeField] private LevelWindow levelWindow;
     [SerializeField] private bool needLevelWindow, needSkillTree;
-    private int level, experience, skillPoints;
+    private int level, experience, skillPoints, skillpointsSpent;
     private List<SkillType> unlockedSkills;
     [SerializeField] private bool menu, summaryscreen;
 
@@ -25,8 +24,10 @@ public class SaveLoad : MonoBehaviour, IDataPersistence
         level = levelSystem.GetLevelNumber();
         experience = levelSystem.GetExperience();
         skillPoints = playerSkills.GetSkillPoints();
+        skillpointsSpent = playerSkills.GetSkillPointsSpent();
         unlockedSkills = playerSkills.unlockedSkillTypeList;
         data.skillPoints = skillPoints;
+        data.skillPointsSpent = skillpointsSpent;
         data.unlockedSkills = playerSkills.unlockedSkillTypeList;
 
         data.level = level;
@@ -36,12 +37,13 @@ public class SaveLoad : MonoBehaviour, IDataPersistence
     {
         unlockedSkills = data.unlockedSkills;
         await Task.Delay(10);
-        //Debug.Log("Skill points: " + data.skillPoints + "level: " + data.level + "experience: " + data.experience);
+        Debug.Log("Skill points: " + data.skillPoints + "level: " + data.level + "experience: " + data.experience);
         levelSystem.level = data.level;
         levelSystem.experience = data.experience;
         if (!menu)
         {
             playerSkills.skillPoints = data.skillPoints;
+            playerSkills.skillPointsSpent = data.skillPointsSpent;
 
             foreach (SkillType s in unlockedSkills)
             {
@@ -63,8 +65,6 @@ public class SaveLoad : MonoBehaviour, IDataPersistence
 
     }
 
-
-    //private List<SkillType> unlockedSkills;
 
     public void SetLevelSystem(LevelSystem LevelSystem)
     {

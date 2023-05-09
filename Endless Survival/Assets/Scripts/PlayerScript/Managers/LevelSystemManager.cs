@@ -21,7 +21,7 @@ public class LevelSystemManager : MonoBehaviour
     private async void Start()
     {
 
-        LevelManager.OnSceneChanged += LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged += LevelManager_OnSceneChanged;
         if(lvlWindowOn)
             levelWindow.SetLevelSystem(levelSystem);
 
@@ -29,6 +29,7 @@ public class LevelSystemManager : MonoBehaviour
         saveLoad.SetLevelSystem(levelSystem);
         saveLoad.SetPlayerSkills(player.GetPlayerSkills());
 
+        player.SetLevelSystem(levelSystem);
 
         LevelSystemAnimated levelSystemAnimated = new(levelSystem);
         if(lvlWindowOn)
@@ -41,17 +42,17 @@ public class LevelSystemManager : MonoBehaviour
         }
         if (summaryscreen)
         {
-            await Task.Delay(1000);
+            await Task.Delay(15);
             levelSystem.AddExperience(LevelSystemManager.enemyKilledMax * 3);
         }
     }
-    private void FixedUpdate()
-    {
-        Debug.Log(enemyKilledMax);
-    }
+    //private void FixedUpdate()
+    //{
+    //    Debug.Log(enemyKilledMax);
+    //}
     private void OnDestroy()
     {
-        LevelManager.OnSceneChanged -= LevelManager_OnSceneChanged;
+        StateManager.OnSceneChanged -= LevelManager_OnSceneChanged;
 
     }
     private void LevelManager_OnSceneChanged(GameScene state)
@@ -64,6 +65,7 @@ public class LevelSystemManager : MonoBehaviour
         if(state == GameScene.Defeat || state == GameScene.Wictory)
         {
             enemyKilledMax = enemyKilled;
+            DBManager.kills = enemyKilledMax;
         }
     }
 }

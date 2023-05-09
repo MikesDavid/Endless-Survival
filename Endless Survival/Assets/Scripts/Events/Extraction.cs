@@ -6,17 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class Extraction : MonoBehaviour
 {
-    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private StateManager levelManager;
     [SerializeField] private Timer timer;
     [SerializeField] private TextMeshProUGUI extractionTxt;
     [SerializeField] private float time = 10f;
+    [SerializeField] private GameObject ShowExtrPoint, HideExtrPoint;
+    [SerializeField] private LoadingScreen loadingScreen;
+    [SerializeField] private GameObject ShowArrow, HideArrow, Arrow;
 
     [SerializeField] Transform show, hide;
 
-    private bool readyToExtract;
+    [SerializeField]private bool readyToExtract;
     void Start()
     {
         readyToExtract = false;
+        transform.position = HideExtrPoint.transform.position;
+        Arrow.transform.position = HideArrow.transform.position;
     }
 
 
@@ -24,15 +29,20 @@ public class Extraction : MonoBehaviour
     {
         if (timer.minutes == 5)
             readyToExtract = true;
-        else
-            readyToExtract = false;
+        if (readyToExtract)
+        {
+            extractionTxt.transform.position = show.position;
+            transform.position = ShowExtrPoint.transform.position;
+            Arrow.transform.position = ShowArrow.transform.position;
+        }
+        else extractionTxt.transform.position = hide.position;
 
     }
     private void OnTriggerEnter(Collider collider)
     {
         if (readyToExtract)
         {
-            transform.position = show.position;
+            extractionTxt.transform.position = show.position;
             time = time -= Time.deltaTime;
             if (time >= 0 && collider.tag == "Player")
                 Extracting();
@@ -43,7 +53,7 @@ public class Extraction : MonoBehaviour
     {
         if (readyToExtract)
         {
-            transform.position = hide.position;
+            extractionTxt.transform.position = hide.position;
             time = default;
         }
 
@@ -52,7 +62,7 @@ public class Extraction : MonoBehaviour
     {
         levelManager.CurrentScene(GameScene.Wictory);
         yield return new WaitForSeconds(5000);
-        SceneManager.LoadScene(3, LoadSceneMode.Single);
+        loadingScreen.LoadLevel(3);
 
 
     }

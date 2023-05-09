@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        if (LevelManager.instance.State == GameScene.Lobby)
+        if (StateManager.instance.State == GameScene.Lobby)
         {
             rb.useGravity = false;
             this.enabled = false;
@@ -89,6 +89,9 @@ public class PlayerController : MonoBehaviour
             rb.drag = groundDrag;
         else rb.drag = 0;
     }
+
+
+
     private void FixedUpdate()
     {
         MovePlayer();

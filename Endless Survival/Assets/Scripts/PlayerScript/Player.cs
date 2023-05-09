@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float CurrentShield;
     public float seconds, RegenSpeed, amount;
     public bool damaged, ingame;
+    public static float damagetaken;
+    
 
     public LevelSystemAnimated LevelSystemAnimated;
 
@@ -25,13 +27,17 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] Dashing dashing;
     [SerializeField] MouseLook mouseLook;
-    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private StateManager levelManager;
+    private LevelSystem levelSystem;
 
 
+    public void SetLevelSystem(LevelSystem levelSystem)
+    {
+        this.levelSystem = levelSystem;
+    }
 
 
-
-    private void Awake()
+        private void Awake()
     {
         playerController.enabled = true;
         dashing.enabled = true;
@@ -53,8 +59,22 @@ public class Player : MonoBehaviour
         await Task.Delay(11);
         CurrentHealth = PlayerHealth;
         CurrentShield = PlayerShield;
+        StateManager.OnSceneChanged += SceneManager_OnSceneChanged; ;
+
     }
 
+    private void SceneManager_OnSceneChanged(GameScene state)
+    {
+        if(state == GameScene.Start || state == GameScene.Lobby)
+        {
+            damagetaken = 0;
+        }
+        if(state == GameScene.Defeat ||state == GameScene.Wictory)
+        {
+            DBManager.damageTagen = (int)damagetaken;
+
+        }
+    }
 
     private void Update()
     {
@@ -106,10 +126,13 @@ public class Player : MonoBehaviour
         if (CurrentShield > 0f)
         {
             CurrentShield -= amount;
+            damagetaken += amount;
         }
         if (CurrentShield <= 0f)
         {
             CurrentHealth -= amount;
+            damagetaken += amount;
+
             if (CurrentHealth <= 0f)
             {
 
@@ -132,7 +155,7 @@ public class Player : MonoBehaviour
     private async void LoadSummaryScene()
     {
         await Task.Delay(5000);
-        SceneManager.LoadScene(3, LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3, LoadSceneMode.Single);
         
     }
     public PlayerSkills GetPlayerSkills()
@@ -166,7 +189,8 @@ public class Player : MonoBehaviour
 
     private void LevelSystem_OnLevelChanged(object sender, System.EventArgs e)
     {
-        playerSkills.AddSkillPoints();
+        playerSkills.AddSkillPoints(levelSystem.GetLevelNumber());
+        Debug.Log(levelSystem.GetLevelNumber());
     }
     public bool CanUseDash()
     {

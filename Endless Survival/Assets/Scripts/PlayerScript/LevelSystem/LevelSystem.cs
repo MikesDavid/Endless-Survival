@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class LevelSystem
+public class LevelSystem 
 {
     public event EventHandler OnExperienceChanged;
     public event EventHandler OnLevelChanged;

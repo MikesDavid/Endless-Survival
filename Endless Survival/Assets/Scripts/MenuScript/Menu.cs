@@ -8,11 +8,28 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject gameMenu;
     [SerializeField] private GameObject options;
+
+    private void Start()
+    {
+        StateManager.OnSceneChanged += SceneManager_OnSceneChanged;
+    }
+
+    private void SceneManager_OnSceneChanged(GameScene state)
+    {
+        if (state == GameScene.Start)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
     private void Update()
     {
         
         if (Input.GetKey(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             PauseGame();
             gameMenu.SetActive(true);
             Debug.Log("Timescale: 0");
@@ -27,6 +44,8 @@ public class Menu : MonoBehaviour
     }
     public void ReturnToGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Debug.Log("Timescale: 1");
         Time.timeScale = 1f;
     }

@@ -9,6 +9,7 @@ public class GameData
     public int level;
     public int experience;
     public int skillPoints;
+    public int skillPointsSpent;
     public List<SkillType> unlockedSkills;
 
     public GameData() 
@@ -16,5 +17,6 @@ public class GameData
         level = 0;
         experience = 0;
         skillPoints = 0;
+        skillPointsSpent = 0;
     }
 }

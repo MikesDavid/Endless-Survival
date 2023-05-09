@@ -9,7 +9,7 @@ public class FileDataHandler
     private string dataFileName = "";
 
     private bool useEncyption = false;
-    private readonly string encryptionCodeWord = "nemtudom";
+    private readonly string encryptionCodeWord = "Endless";
 
     public FileDataHandler(string dataDirPath, string dataFileName,bool useEncyption)
     {
@@ -70,12 +70,14 @@ public class FileDataHandler
                     writer.Write(dataToStore);
                 }
             }
+            //DBManager.save = dataToStore;
         }
         catch (Exception e)
         {
 
             Debug.LogError("Error occured when trying to save data to file: " + fullPath + "\n" + e);
         }
+
     }
 
     private string EncryptDecrypt(string data)

@@ -38,6 +38,7 @@ public class LevelWindow : MonoBehaviour
     public void SetLevel(int levelNumber) 
     {
         levelText.text = "LEVEL " + (levelNumber + 1);
+        DBManager.szint = levelNumber + 1;
     }
     public void SetLevelSystem(LevelSystem LevelSystem)
     {

@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class LevelManager : MonoBehaviour
+public class StateManager : MonoBehaviour
 {
-    public static LevelManager instance;
+    public static StateManager instance;
     public static event Action<GameScene> OnSceneChanged;
 
     public GameScene State;
@@ -23,7 +24,6 @@ public class LevelManager : MonoBehaviour
                 UnlockCursor();
             break;
             case GameScene.Start:
-                LockCursor();
             break;
             case GameScene.Defeat:
                 UnlockCursor();
@@ -34,11 +34,6 @@ public class LevelManager : MonoBehaviour
         }
         OnSceneChanged?.Invoke(gameScene);
 
-    }
-    private void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
     private void UnlockCursor()
     {
