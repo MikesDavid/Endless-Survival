@@ -1,0 +1,212 @@
+body {
+  background-color: #9db7cf;
+}
+a {
+  text-decoration: none;
+}
+rect {
+  opacity: 0;
+}
+circle {
+  stroke:#029602;
+  fill:#029602;
+}
+
+.content {
+  min-height: 87.7vh;
+}
+.blur-off {
+    image-rendering: pixelated;
+}
+.my-fa:hover {
+    color: #ffffff;
+}
+.my-fa {
+  color: #aaaaaa;
+}
+.my-profile, .my-profile-center, .profile {
+  width: 40px;
+  height: 40px;
+}
+.my-profile {
+  margin-left: 7px;
+  margin-right: 2px;
+}
+.my-profile:hover, .my-profile-active {
+    margin-left: 5px;
+    margin-right: 0px;
+}
+.my-profile:hover, .my-profile-active,
+.my-profile-center:hover, .my-profile-active-center {
+    border: 2px solid #0662db;
+    background-color: #000000;
+    width: 44px;
+    height: 44px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+.my-bg-gray-gradient {
+  background-image: linear-gradient(to bottom right, #616161 40%, #acabab);
+  border: 3px solid #4e4e4e;
+}
+.my-bg-orange-gradient {
+  background-image: linear-gradient(to bottom right, #c77204 20%, #eeba59, #c77204);
+  border: 3px solid #aa7719;
+}
+.my-bg-green-gradient {
+  background-image: linear-gradient(to bottom, #48c267 40%, #9ddfad);
+  border: 3px solid #1d7934;
+}
+.my-bg-red-gradient {
+  background-image: linear-gradient(to bottom, #b12f2f 40%, #a85d5d);
+  border: 3px solid #792222;
+}
+.my-bg-silver-gradient {
+  border: 3px solid #808080;
+}
+.my-bg-silver-gradient .row {
+  background-image: linear-gradient(to bottom right, #acacac 20%, #dfdfdf, #acacac);
+}
+.my-bg-silver-gradient .bottom {
+  border-bottom: 1px solid #808080;
+}
+.my-border-silver {
+  border-right: 1px solid #929292;
+}
+.my-border-orange {
+  border-right: 1px solid #b68a05;
+}
+.my-border-svg {
+  border: 3px inset #616161;
+}
+.my-border-avatar {
+  border: 3px solid #616161;
+}
+.my-btn-danger {
+  min-width: 80px;
+  border: 2px outset #a71d1d;
+}
+.my-btn-success {
+  min-width: 80px;
+  border: 2px outset #0f5f19;
+}
+.my-btn-primary {
+  min-width: 80px;
+  border: 2px outset #425ac2;
+}
+.my-btn {
+  width: 100%;
+  margin-top: 5px;
+  border: 2px outset #a71d1d;
+  min-width: 158px;
+}
+.profile-link {
+  color: #256c8f;
+}
+.my-table-edit th {
+  text-align: right;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-bottom: 1px solid #727272;
+  border-right: 1px solid #727272;
+  font-weight: normal;
+}
+.my-table-edit td {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid #727272;
+}
+.my-input-text {
+  padding: 3px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #313131;
+  border: none;
+}
+.my-input-text:focus {
+  outline-color: #198754;
+  outline-style: solid;
+}
+.my-text-ellipsis {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.my-input-file input {
+  width: 100%;
+}
+.profile-edit-btn::file-selector-button, .profile-edit-btn[type=submit] {
+  color: #198754;
+  border: 1px solid #198754;
+  background-color: #313131;
+}
+.profile-edit-btn::file-selector-button:hover, .profile-edit-btn[type=submit]:hover {
+  color: #198754;
+  border: 1px solid #198754;
+  background-color: #3b3b3b;
+}
+.first-line-hide::first-line {
+  visibility: hidden;
+}
+.first-line-hide {
+  max-width: 128px;
+}
+.my-img-frame {
+  position: relative;
+  width: 100%;
+}
+.my-img-frame:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.my-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.my-img-fit-cover, .my-img, .profile {
+  object-fit: cover;
+}
+.profile {
+  background-color: #d3d3d3;
+}
+.rank {
+  position: absolute;
+  width: 100%;
+  text-align: end;
+  margin-top: 83%;
+  z-index: 2;
+}
+.rank span {
+  background-image: linear-gradient(to bottom right, #c77204 20%, #eeba59, #c77204);
+  border: 2px solid #724e0b;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.d-felx-1-0-0 {
+  flex: 1 0 0%;
+}
+
+#tooltip, #tooltip_reg {
+  border: #000000 solid 2px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 235px;
+  z-index: 3;
+}
+#tooltip p, #tooltip_reg p {
+  color: #000000;
+  margin: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 462px) {
+  #input-text {
+    display: none;
+  }
+}
