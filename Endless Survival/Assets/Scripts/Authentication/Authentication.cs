@@ -12,6 +12,7 @@ public class Authentication : MonoBehaviour
     [SerializeField] private TMP_Text ErrorMessage;
     [SerializeField] private GameObject MainPage;
     [SerializeField] private GameObject MainMenu;
+    [SerializeField] private GameObject dataPresistanceManager;
 
     public Button submitButton;
 
@@ -33,12 +34,13 @@ public class Authentication : MonoBehaviour
             DBManager.username = nameField.text;
             MainPage.SetActive(false);
             MainMenu.SetActive(true);
-            Debug.Log(DBManager.username);
+            Debug.Log(DBManager.username); 
+            dataPresistanceManager.SetActive(true);
         }
         if (www.text[0] == '4' || www.text[0] == '3')
         {
             ErrorMessage.text = "Wrong Username or Password!";
         }
-
+        
     }
 }

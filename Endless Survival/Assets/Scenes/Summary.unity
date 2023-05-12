@@ -1919,6 +1919,10 @@ PrefabInstance:
       value: DataPersistenceManager
       objectReference: {fileID: 0}
     - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+      propertyPath: fileName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
       propertyPath: useEncription
       value: 0
       objectReference: {fileID: 0}

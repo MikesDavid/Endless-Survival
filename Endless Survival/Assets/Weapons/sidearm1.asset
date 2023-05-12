@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e639fa154dcb6f74ebb8b70bf43c0c1f, type: 3}
+  m_Name: sidearm1
+  m_EditorClassIdentifier: 
+  damage: 50
+  fireRate: 0
+  spread: 0.01
+  range: 150
+  reloadTime: 2.3
+  timeBetweenShots: 0.5
+  magazineSize: 6
+  bulletsPerTap: 1
+  burstAmount: 6
+  allowButtonHold: 0
+  allowBurst: 0
+  allowDifferentMode: 0
+  burstNormalMode: 0
+  burstAutoMode: 0
+  autoNormalMode: 0
+  isShotgun: 0

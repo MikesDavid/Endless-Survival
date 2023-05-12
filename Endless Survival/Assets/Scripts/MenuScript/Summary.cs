@@ -110,12 +110,22 @@ public class Summary : MonoBehaviour
             PrimaryWeapon = "Machine Gun";
         else if (selectedPrimary == 1)
             PrimaryWeapon = "Shotgun";
+        else if (selectedPrimary == 2)
+            PrimaryWeapon = "Galactic Annihilator";
+        else if (selectedPrimary == 3)
+            PrimaryWeapon = "Ion Crusher";
+        else if (selectedPrimary == 4)
+            PrimaryWeapon = "Quantum Storm";
     }
     private void SelectedSecondary()
     {
         if (selectedSecondary == 0)
             SecondaryWeapon = "Pistol";
         else if (selectedSecondary == 1)
-            SecondaryWeapon = "Auto Pistol";
+            SecondaryWeapon = "Ionfire ARX";
+        else if (selectedSecondary == 2)
+            SecondaryWeapon = "Solaris XR-5";
+        else if (selectedSecondary == 3)
+            SecondaryWeapon = "Solarflare RX-3000";
     }
 }

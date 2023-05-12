@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: def503449aa05094285a7b5f57f75e21
+ModelImporter:
+  serializedVersion: 22103
+  internalIDToNameTable:
+  - first:
+      74: -3584619823844665163
+    second: metarig|Action
+  - first:
+      74: -328511838607577379
+    second: metarig|minigunidle
+  - first:
+      74: -8652720310431612158
+    second: metarig|primary1aim
+  - first:
+      74: -3085954686945719592
+    second: metarig|primary1aimfire
+  - first:
+      74: -9027352681614001608
+    second: metarig|Primary1fire
+  - first:
+      74: -8203860866651374253
+    second: metarig|primary1idle
+  - first:
+      74: 1722341832713596122
+    second: metarig|primary2aim
+  - first:
+      74: 8613583096207303123
+    second: metarig|primary2aimfire
+  - first:
+      74: 4782615412581318954
+    second: metarig|primary2fire
+  - first:
+      74: -1284781226469037380
+    second: metarig|primary2idle
+  - first:
+      74: 7366750095587828581
+    second: metarig|sidearm1.Aim
+  - first:
+      74: 2523732693455546688
+    second: metarig|sidearm1.aimshoot
+  - first:
+      74: -7619425493887556687
+    second: metarig|Sidearm1.fire
+  - first:
+      74: 8454589213229635810
+    second: metarig|Sidearm1Idle
+  - first:
+      74: -2231878470119588187
+    second: metarig|sidearm2.aim
+  - first:
+      74: 2093552872553007317
+    second: metarig|sidearm2aimfire
+  - first:
+      74: 3040489437885536772
+    second: metarig|sidearm2fire
+  - first:
+      74: -2812405905329619975
+    second: metarig|Sidearm2idle
+  - first:
+      74: -7315403615672154863
+    second: metarig|sidearm3.aim
+  - first:
+      74: 9093045411139894153
+    second: metarig|sidearm3.aimfire
+  - first:
+      74: -2331200972990954118
+    second: metarig|sidearm3.fire
+  - first:
+      74: 1233535521718598254
+    second: metarig|sidearm3.idle
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

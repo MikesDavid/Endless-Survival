@@ -1087,6 +1087,7 @@ MonoBehaviour:
   ErrorMessage: {fileID: 107734969}
   MainPage: {fileID: 606528303}
   MainMenu: {fileID: 1806029029}
+  dataPresistanceManager: {fileID: 1752975651}
   submitButton: {fileID: 520638474}
 --- !u!114 &606528306
 MonoBehaviour:
@@ -1192,13 +1193,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataPersistenceManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7606999901884680600, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+      propertyPath: fileName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+      propertyPath: mainmenu
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
       propertyPath: useEncription
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+      propertyPath: authentication
+      value: 
+      objectReference: {fileID: 606528303}
+    - target: {fileID: 7606999901884680601, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
       propertyPath: initializeDataIfNull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606999901884680602, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
       propertyPath: m_RootOrder
@@ -2597,6 +2614,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502367967}
   m_CullTransparentMesh: 1
+--- !u!1 &1752975651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7606999901884680600, guid: 020cb5ec19111ac45a3f331d14fcd588, type: 3}
+  m_PrefabInstance: {fileID: 667121786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803684480
 GameObject:
   m_ObjectHideFlags: 0
