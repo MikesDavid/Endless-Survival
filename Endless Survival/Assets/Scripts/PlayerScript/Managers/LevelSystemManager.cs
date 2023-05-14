@@ -13,6 +13,7 @@ public class LevelSystemManager : MonoBehaviour
     // [SerializeField] private EquipWindow equipWindow;
 
     public bool uiSkilltreeOnOff,lvlWindowOn, summaryscreen;
+    private bool Wictory;
 
 
     [SerializeField]public int enemyKilled;
@@ -43,7 +44,11 @@ public class LevelSystemManager : MonoBehaviour
         if (summaryscreen)
         {
             await Task.Delay(15);
-            levelSystem.AddExperience(LevelSystemManager.enemyKilledMax * 3);
+            if (!Wictory)
+                levelSystem.AddExperience(LevelSystemManager.enemyKilledMax * 2);
+            if (Wictory)
+                levelSystem.AddExperience(LevelSystemManager.enemyKilledMax * 4);
+
         }
     }
     //private void FixedUpdate()
@@ -67,5 +72,9 @@ public class LevelSystemManager : MonoBehaviour
             enemyKilledMax = enemyKilled;
             DBManager.kills = enemyKilledMax;
         }
+        if (state == GameScene.Defeat)
+            Wictory = false;
+        if (state == GameScene.Wictory)
+            Wictory = true;
     }
 }

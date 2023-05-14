@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e639fa154dcb6f74ebb8b70bf43c0c1f, type: 3}
   m_Name: Primary1
   m_EditorClassIdentifier: 
-  damage: 15
+  weaponName: Galactic Annihilator
+  damage: 20
   fireRate: 0.05
   spread: 0.02
   range: 120

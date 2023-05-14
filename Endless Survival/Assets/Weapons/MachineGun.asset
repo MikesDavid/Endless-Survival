@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e639fa154dcb6f74ebb8b70bf43c0c1f, type: 3}
   m_Name: MachineGun
   m_EditorClassIdentifier: 
+  weaponName: Machine Gun
   damage: 10
   fireRate: 0
   spread: 0.02

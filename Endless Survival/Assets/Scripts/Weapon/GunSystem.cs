@@ -3,6 +3,7 @@ using TMPro;
 using System.Data.SqlTypes;
 using System.Collections;
 using System.Threading.Tasks;
+using UnityEngine.VFX;
 
 public class GunSystem : MonoBehaviour
 {
@@ -26,9 +27,15 @@ public class GunSystem : MonoBehaviour
     public Input fire, reload, swapMode, zoom;
 
     [Header("Graphics")]
-    public GameObject muzzleFlash, ImpactGraphics;
+    public GameObject ImpactGraphics;
+    public VisualEffect muzzleFlash;
     public TextMeshProUGUI text;
     public Animator animator;
+
+    public void Play(VFXEventAttribute eventAttribute)
+    {
+        
+    }
 
     private void Awake()
     {
@@ -135,14 +142,15 @@ public class GunSystem : MonoBehaviour
             }
 
         }
-        Instantiate(muzzleFlash, attackPoint.position, Quaternion.LookRotation(direction));
+        //Instantiate(muzzleFlash, attackPoint.position, Quaternion.LookRotation(direction));
 
         //Graphics
         if (Physics.Raycast(fpsCam.transform.position,direction, out rayHit, Weapon.range, whatIsEnviroment) && !Physics.Raycast(fpsCam.transform.position, direction, Weapon.range, whatIsEnemy))
         {
-            //Instantiate(bulletHoleGraphics, rayHit.point, Quaternion.LookRotation(rayHit.normal));
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+            Instantiate(ImpactGraphics, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+            //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         }
+        muzzleFlash.Play();
 
         bulletsLeft--;
         bulletsShot--;

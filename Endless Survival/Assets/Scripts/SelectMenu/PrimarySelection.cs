@@ -7,6 +7,7 @@ public class PrimarySelection : MonoBehaviour
 {
 
     public GameObject[] primary;
+    public GameObject[] primaryStat;
 
 
     public int selectedPrimary = 0;
@@ -14,19 +15,23 @@ public class PrimarySelection : MonoBehaviour
     public void NextPrimary()
     {
         primary[selectedPrimary].SetActive(false);
+        primaryStat[selectedPrimary].SetActive(false);
         selectedPrimary = (selectedPrimary + 1) % primary.Length;
         primary[selectedPrimary].SetActive(true);
+        primaryStat[selectedPrimary].SetActive(true);
     }
 
     public void PreviousPrimary()
     {
         primary[selectedPrimary].SetActive(false);
+        primaryStat[selectedPrimary].SetActive(false);
         selectedPrimary--;
         if (selectedPrimary < 0)
         {
             selectedPrimary += primary.Length;
         }
         primary[selectedPrimary].SetActive(true);
+        primaryStat[selectedPrimary].SetActive(true);
     }
 
 

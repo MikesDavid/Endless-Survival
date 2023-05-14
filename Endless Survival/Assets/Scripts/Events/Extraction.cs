@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class Extraction : MonoBehaviour
 {
     [SerializeField] private StateManager levelManager;
     [SerializeField] private Timer timer;
     [SerializeField] private TextMeshProUGUI extractionTxt;
-    [SerializeField] private float time = 10f;
+    [SerializeField] private float time = 5f;
     [SerializeField] private GameObject ShowExtrPoint, HideExtrPoint;
     [SerializeField] private LoadingScreen loadingScreen;
     [SerializeField] private GameObject ShowArrow, HideArrow, Arrow;
+    private bool countDown;
 
     [SerializeField] Transform show, hide;
+    [SerializeField] VisualEffect portal;
+    [SerializeField] LoadingScreen LoadingScreen;
 
     [SerializeField]private bool readyToExtract;
     void Start()
@@ -23,7 +27,20 @@ public class Extraction : MonoBehaviour
         transform.position = HideExtrPoint.transform.position;
         Arrow.transform.position = HideArrow.transform.position;
     }
+    private void Update()
+    {
+        extractionTxt.text = time.ToString("0").PadLeft(2, '0');
+        if (countDown)
+        {
+            time = time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                levelManager.CurrentScene(GameScene.Wictory);
+                LoadingScreen.LoadLevel(3);
+            }
 
+        }
+    }
 
     void FixedUpdate()
     {
@@ -31,7 +48,8 @@ public class Extraction : MonoBehaviour
             readyToExtract = true;
         if (readyToExtract)
         {
-            extractionTxt.transform.position = show.position;
+            portal.gameObject.SetActive(true);
+
             transform.position = ShowExtrPoint.transform.position;
             Arrow.transform.position = ShowArrow.transform.position;
         }
@@ -42,10 +60,9 @@ public class Extraction : MonoBehaviour
     {
         if (readyToExtract)
         {
-            extractionTxt.transform.position = show.position;
-            time = time -= Time.deltaTime;
-            if (time >= 0 && collider.tag == "Player")
-                Extracting();
+            if(collider.tag == "Player")
+                countDown = true;
+            extractionTxt.transform.position = show.position;            
         }
 
     }
@@ -53,17 +70,18 @@ public class Extraction : MonoBehaviour
     {
         if (readyToExtract)
         {
-            extractionTxt.transform.position = hide.position;
-            time = default;
+            if (collider.tag == "Player")
+            {
+                countDown = false;
+                extractionTxt.transform.position = hide.position;
+                time = 5;
+            }
+            
         }
 
     }
     private IEnumerator Extracting()
     {
-        levelManager.CurrentScene(GameScene.Wictory);
-        yield return new WaitForSeconds(5000);
-        loadingScreen.LoadLevel(3);
-
-
+        yield return new WaitForSeconds(100);
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e639fa154dcb6f74ebb8b70bf43c0c1f, type: 3}
   m_Name: Primary2
   m_EditorClassIdentifier: 
+  weaponName: Ion Crusher
   damage: 25
   fireRate: 0
   spread: 0.025

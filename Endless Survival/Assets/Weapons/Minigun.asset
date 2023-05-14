@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e639fa154dcb6f74ebb8b70bf43c0c1f, type: 3}
   m_Name: Minigun
   m_EditorClassIdentifier: 
-  damage: 10
+  weaponName: Quantum Storm
+  damage: 15
   fireRate: 0
   spread: 0.04
   range: 150

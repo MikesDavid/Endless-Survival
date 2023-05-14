@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     [Header("Timer Settings")]
 
     public float currentTime, seconds, minutes, hours;
-    public float enemy1SpawnDec, enemy2SpawnDec, enemy3SpawnDec;
+    public float enemy1SpawnDec, enemy2SpawnDec, enemy3SpawnDec, increaseHealth;
     public static float saveSec, saveMin, saveHour;
     public bool countDown,ingame; //, spawnReduced1, spawnReduced2, spawnReduced3;
     [Header("Limit Settings")]
@@ -28,6 +28,7 @@ public class Timer : MonoBehaviour
         StartCoroutine(DecreaseEnemy1Timer(enemy1SpawnDec));
         StartCoroutine(DecreaseEnemy2Timer(enemy2SpawnDec));
         StartCoroutine(DecreaseEnemy3Timer(enemy3SpawnDec));
+        StartCoroutine(IncreaseEnemyHealth(increaseHealth));
         StateManager.OnSceneChanged += LevelManager_OnSceneChanged;
     }
 
@@ -115,6 +116,15 @@ public class Timer : MonoBehaviour
     //    if (enemySpawner.enemy3Interval == 2.5)
     //        spawnReduced3 = true;
     //}
+    private IEnumerator IncreaseEnemyHealth(float interval)
+    {
+        yield return new WaitForSeconds(interval);
+        foreach (Target target in Target.enemyList)
+        {
+            target.health += 10;
+        };
+        StartCoroutine(IncreaseEnemyHealth(interval));
+    }
     private IEnumerator DecreaseEnemy1Timer(float interval)
     {
         yield return new WaitForSeconds(interval);

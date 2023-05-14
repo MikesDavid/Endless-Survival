@@ -4,15 +4,18 @@ using UnityEngine;
 using System.Linq;
 using System;
 using UnityEngine.SceneManagement;
-using System.Threading.Tasks;
+using UnityEngine.UI;
+
 
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("Debugging")]
     [SerializeField] private bool initializeDataIfNull = false;
+
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
     [SerializeField] private bool useEncription;
+
 
     private GameData gameData;
 
@@ -57,7 +60,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void  NewGame()
     {
-        this.gameData = new GameData();
+
         SaveGame();
     }
     public void LoadGame()

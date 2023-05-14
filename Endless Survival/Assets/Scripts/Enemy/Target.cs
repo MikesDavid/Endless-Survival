@@ -16,7 +16,10 @@ public class Target : MonoBehaviour
         enemyList.Add(this);
         levelSystemManager = FindObjectOfType<LevelSystemManager>();
     }
-
+    private void FixedUpdate()
+    {
+        Debug.Log(health);
+    }
 
     public void TakeDamage(float amount )
     {
