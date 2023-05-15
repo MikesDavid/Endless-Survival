@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 941
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 120
+  controlID: 122
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 119
+  controlID: 56
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 69
+  controlID: 57
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -432,22 +432,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/Ui
+    - Assets/Scripts/PlayerScript/LevelSystem
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Textures/Ui
+  - Assets/Scripts/PlayerScript/LevelSystem
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\Github\Endless-Survival\Endless Survival
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 221}
-    m_SelectedIDs: e8870000
-    m_LastClickedID: 34792
-    m_ExpandedIDs: 00000000407b0000427b0000447b0000467b0000487b00004a7b00004c7b00004e7b0000507b00007a7b00007e7b00008e7b000000ca9a3b
+    scrollPos: {x: 0, y: 173}
+    m_SelectedIDs: 9a830000
+    m_LastClickedID: 33690
+    m_ExpandedIDs: 00000000a2800000a4800000a6800000a8800000aa800000ac800000ae800000b0800000b2800000b4800000e4800000ec80000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000407b0000427b0000447b0000467b0000487b00004a7b00004c7b00004e7b0000507b0000
+    m_ExpandedIDs: 00000000a2800000a4800000a6800000a8800000aa800000ac800000ae800000b0800000b2800000b4800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,7 +605,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d83ef7ff8a3ff7ff6845f7ff3c49f7fff04cf7fff84ef7ff5c5df7ff125ef7ff0864f7ffd867f7ff886bf7ff8c6df7ff9cdef7ff46dff7ff3ae5f7ff0ae9f7ffb8ecf7ffbceef7ffc63af9ff703bf9ff4841f9ff1845f9ffc448f9ffc84af9ff0854f9ffb254f9ffa65af9ff765ef9ff2262f9ff2664f9ffbcc3f9ff46cbf9fff0cbf9ffccd1f9ffa0d5f9ff50d9f9ff58dbf9ff18def9ffa6fbf9ff18fef9fffafef9ffd41cfaff261dfaff9620faff9c20faff2421faff4a25faff5025fafff225fafff425faff4c2afaff522afaffa02afaff742dfaff882dfaff7635faff2036faff163cfaffe83ffaff9a43faffa445faffd03bfbff3a74ffff349affff9cf7ffff02fbffffbe7c0000d47c0000227d00003e7d00004a7d00008ad0000072d30000acd3000058d80000bcda0000c4e2000032e80000c40001001a010100540101002016010006180100d618010044190100f22a0100282b0100042e0100d42e0100422f0100762f010092510100a45401007455010016560100
+      m_ExpandedIDs: 80f5ffff02fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -920,9 +920,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 917.8136, y: 211.96121, z: 15.500447}
+    m_Target: {x: 376.83014, y: 132.37311, z: 15.648458}
     speed: 2
-    m_Value: {x: 917.8136, y: 211.96121, z: 15.500447}
+    m_Value: {x: 376.83014, y: 132.37311, z: 15.648458}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -992,7 +992,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.103107765, y: 0.44386372, z: -0.051483918, w: 0.8886891}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
