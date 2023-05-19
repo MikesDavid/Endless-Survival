@@ -25,10 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //$locale = session()->get('locale');
-        //View::share(
-        //    'locale', 
-        //    $locale == null ? Session::get('locale') : $locale
-        //);
+        //
     }
 }
