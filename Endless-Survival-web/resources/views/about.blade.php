@@ -10,12 +10,5 @@
             <p>Mikes dávid: Készitette a játékot.</p>
             <p>Dömök Dávid: Készitette a weboldalt.</p>
         </div>
-        @php
-            $con = mysqli_connect("localhost","root","","szakdgame");
-            if (mysqli_connect_errno()) {
-              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
-            // $a = mysqli_query($con, "call add_rand_match('test', 2)");
-        @endphp
 
 @endsection

@@ -16,6 +16,7 @@ function showTooltip(match) {
     var line = document.getElementById("line");
 
     if (match != null) {
+        // var character = document.getElementById("character");
         var primary_weapon = document.getElementById("primary_weapon");
         var secondary_weapon = document.getElementById("secondary_weapon");
         var kills = document.getElementById("kills");
@@ -25,6 +26,7 @@ function showTooltip(match) {
         var date = document.getElementById("date");
         var play_time = document.getElementById("play_time");
 
+        // character.innerHTML = match.character;
         primary_weapon.innerHTML = match.primary_weapon;
         secondary_weapon.innerHTML = match.secondary_weapon;
         kills.innerHTML = match.kills;

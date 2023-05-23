@@ -28,16 +28,16 @@
 --
 
 INSERT INTO `users` (`id`, `email`, `username`, `password`, `avatar`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'test.test@gmail.com', 'test', '$2y$10$Gmx4UBJBAd48rnv7DM8pHurihlpCX9Ep7rmCO7XMEkP..uhfrkWlK', 'default.jpg', NULL, NULL, '2000-04-11 13:27:08', '2023-04-07 14:37:21'),
-(2, 'test1@gmail.com', 'test1', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '2.jpg', NULL, NULL, '1999-02-11 16:26:52', '2023-02-24 16:26:52'),
-(7, 'test2@gmail.com', 'Babi', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '7.jpg', NULL, NULL, '2003-04-01 21:01:15', NULL),
-(8, 'test3@gmail.com', 'Kenyér', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '8.png', NULL, NULL, '2023-02-23 23:00:00', NULL),
-(9, 'test4@gmail.com', 'Steve', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '9.png', NULL, NULL, '2013-04-18 21:02:02', NULL),
-(10, 'test5@gmail.com', 'Jóképű Kenyér', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '10.jpg', NULL, NULL, '2014-04-23 21:02:17', NULL),
-(11, 'test6@gmail.com', 'test6', '$2y$10$mBNcdNNR2.Kv47J3ziq1EuLq8csySZ0aHKTygaLFxKFWKeQe5eMhe', 'default.jpg', NULL, NULL, '2023-02-23 23:00:00', '2023-04-05 22:00:56'),
-(16, 'domok.davidka2@gmail.com', 'DomokGx2', '$2y$10$Zb9XypYf4fcXvXatBeLfQOAKBwjsuMNbPYVAycS9OALkT29h3QGLO', 'default.jpg', NULL, NULL, '2023-04-15 11:06:04', '2023-04-15 11:06:04'),
-(20, 'domok.davidka1@gmail.com', 'DomokGx1', '$2y$10$zaneJUupF13vNCRfgqQ8bOMlSGhkys/Dlwbl9QDs5BuAW7LM5b5Yq', 'default.jpg', NULL, 'P4uWbGSfhES3yl6bdzVJZWMm2Q69COuoGEWknJD9vrClfrKlm68aCXxq6w0W', '2023-04-15 17:33:28', '2023-04-17 12:59:03'),
-(21, 'test10@gmail.com', 'test10', '$2y$10$14OGj7KuE/Lg9ynrZjUSvOSC1DkLhXThippET6B0Zz.aTfE6tU1mi', 'default.jpg', NULL, 'S7ohv3Enh8kzW5MSCR5P9cpSz35GEwDm2tUczRfQ46EFDIlohQz6ogNn0eBJ', '2023-04-16 10:39:33', '2023-04-16 10:39:33');
+(1, 'test.test@gmail.com', 'test', '$2y$10$Gmx4UBJBAd48rnv7DM8pHurihlpCX9Ep7rmCO7XMEkP..uhfrkWlK', 'default.jpg', NULL, NULL, '2000-04-11 11:27:08', '2023-04-07 12:37:21'),
+(2, 'test1@gmail.com', 'test1', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '2.jpg', NULL, NULL, '1999-02-11 15:26:52', '2023-02-24 15:26:52'),
+(7, 'test2@gmail.com', 'Babi', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '7.jpg', NULL, NULL, '2003-04-01 19:01:15', NULL),
+(8, 'test3@gmail.com', 'Kenyér', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '8.png', NULL, NULL, '2023-02-24 00:00:00', NULL),
+(9, 'test4@gmail.com', 'Steve', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '9.png', NULL, NULL, '2013-04-18 19:02:02', NULL),
+(10, 'test5@gmail.com', 'Jóképű Kenyér', '$2y$10$0ktJEugoRBG0ZpXJaW4eeeLoBzI.jBOvY27TmOXsIJvgJUXGjAc3y', '10.jpg', NULL, NULL, '2014-04-23 19:02:17', NULL),
+(11, 'test6@gmail.com', 'test6', '$2y$10$mBNcdNNR2.Kv47J3ziq1EuLq8csySZ0aHKTygaLFxKFWKeQe5eMhe', 'default.jpg', NULL, NULL, '2023-02-23 22:00:00', '2023-04-05 20:00:56'),
+(16, 'domok.davidka2@gmail.com', 'DomokGx2', '$2y$10$Zb9XypYf4fcXvXatBeLfQOAKBwjsuMNbPYVAycS9OALkT29h3QGLO', 'default.jpg', NULL, NULL, '2023-04-15 09:06:04', '2023-04-15 09:06:04'),
+(20, 'domok.davidka1@gmail.com', 'DomokGx1', '$2y$10$zaneJUupF13vNCRfgqQ8bOMlSGhkys/Dlwbl9QDs5BuAW7LM5b5Yq', 'default.jpg', NULL, 'P4uWbGSfhES3yl6bdzVJZWMm2Q69COuoGEWknJD9vrClfrKlm68aCXxq6w0W', '2023-04-15 15:33:28', '2023-04-17 10:59:03'),
+(21, 'test10@gmail.com', 'test10', '$2y$10$14OGj7KuE/Lg9ynrZjUSvOSC1DkLhXThippET6B0Zz.aTfE6tU1mi', 'default.jpg', NULL, 'S7ohv3Enh8kzW5MSCR5P9cpSz35GEwDm2tUczRfQ46EFDIlohQz6ogNn0eBJ', '2023-04-16 08:39:33', '2023-04-16 08:39:33');
 
 --
 -- A tábla adatainak kiíratása `characters`
@@ -558,7 +558,7 @@ INSERT INTO `matches` (`id`, `cid`, `time`, `kills`, `death`, `primary_weapon`, 
 (493, 2, '00:35:46', 9, b'1', 'Aka-47', 'Knife', 426, '2017-10-12 00:00:00'),
 (494, 2, '00:49:40', 11, b'1', 'Aka-47', 'Knife', 2891, '2011-02-12 00:00:00'),
 (497, 7, '00:57:17', 8, b'1', 'Aka-47', 'Knife', 39, '2023-02-24 04:00:00'),
-(498, 7, '00:57:17', 8, b'1', 'Aka-47', 'Knife', 39, '2023-02-24 13:00:00'),
+(498, 7, '00:57:17', 8, b'1', 'Aka-47', 'Knife', 39, '2023-04-24 13:00:00'),
 (499, 3, '01:07:51', 22, b'0', 'Aka-47', 'Knife', 2120, '2014-07-18 00:00:00'),
 (501, 4, '00:57:17', 8, b'1', 'Aka-47', 'Knife', 39, '2023-02-24 04:00:00'),
 (502, 4, '00:57:17', 8, b'1', 'Aka-47', 'Knife', 39, '2023-02-24 13:00:00'),
@@ -567,7 +567,8 @@ INSERT INTO `matches` (`id`, `cid`, `time`, `kills`, `death`, `primary_weapon`, 
 (510, 15, '00:00:00', 0, b'0', '', '', 0, '2024-04-01 12:01:01'),
 (511, 1, '12:10:01', 3, b'1', 'aka', 'knife', 321, '2023-06-01 12:01:01'),
 (512, 1, '00:29:56', 9, b'1', 'Aka-47', 'Knife', 2684, '2018-03-17 15:29:23'),
-(513, 1, '00:18:33', 20, b'1', 'Aka-47', 'Knife', 2627, '2001-01-12 16:22:29');
+(513, 1, '00:18:33', 20, b'1', 'Aka-47', 'Knife', 2627, '2001-01-12 16:22:29'),
+(514, 7, '00:45:39', 1, b'1', 'Aka-47', 'Knife', 696, '2023-05-09 16:23:33');
 
 -- --------------------------------------------------------
 

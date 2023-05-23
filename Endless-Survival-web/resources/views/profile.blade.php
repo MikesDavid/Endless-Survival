@@ -19,6 +19,7 @@
                 <div class="col-8 p-0 ps-2">
                     <div class="bg-dark my-border-svg" style="height: 100%; width: 100%;">
                         <div id="tooltip" style="position: absolute; display: none;">
+                            {{-- <p>{{ __('Character', [], $locale.'-plus') }}: <span id="character"></span></p> --}}
                             <p>{{ __('Primary weapon', [], $locale.'-plus') }}: <span id="primary_weapon"></span></p>
                             <p>{{ __('Secondary weapon', [], $locale.'-plus') }}: <span id="secondary_weapon"></span></p>
                             <p>{{ __('Kills', [], $locale.'-plus') }}: <span id="kills"></span></p>

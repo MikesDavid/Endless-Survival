@@ -96,7 +96,7 @@ class PageController extends Controller
                         }
                     }
                     else {
-                        for ($h=0; $h < $max_time[0]; $h++) {
+                        for ($h=(int)explode(':', explode(' ', $registrated_at)[1])[0] - 1; $h < $max_time[0]; $h++) {
                             $label = ['x' => $max_x / Count($dates) / $max_time[0] * $h, 'text' => $h.':00'];
                             array_push($date_labels, $label);
                         }

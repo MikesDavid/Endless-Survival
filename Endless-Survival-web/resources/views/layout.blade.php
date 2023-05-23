@@ -89,20 +89,18 @@
                   <p>
                     @php ($i = 1)
                     @foreach (config('app.locales') as $short => $long)
-                      <a class="@if($locale == $short) text-decoration-underline @endif" href="/change-language/{{ $short }}">
-                        {{ __($long, [], $locale.'-plus') }}@if ($i < Count(config('app.locales'))),@endif
-                      </a>
+                      <a class="@if($locale == $short) text-decoration-underline @endif" href="/change-language/{{ $short }}">{{ __($long, [], $locale.'-plus')}}</a>@if ($i < Count(config('app.locales'))),@endif
                       @php ($i += 1)
                     @endforeach
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 text-center">
               <p>{{ env('APP_NAME') }}</p>
             </div>
-            <div class="col-4">
-
+            <div class="col-4 text-end">
+              <p>{{ ucfirst(__('validation.attributes.email', [], $locale.'-plus')) }}: <span class="ps-2">{{ env('MAIL_USERNAME') }}</span></p>
             </div>
           </div>
         </div>
