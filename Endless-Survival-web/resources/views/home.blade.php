@@ -7,6 +7,11 @@
             <p class="fs-5">{{ __('The game is a desktop application written in C#, running under the Windows operating system. The game uses the Unity engine.', [], $locale.'-plus') }}</p>
             <br>
             <p class="fs-5">{{ __('The goal of the game is for the player to try to survive as long as possible against enemies that are constantly getting stronger and spawning faster and faster.', [], $locale.'-plus') }}</p>
+            <div class="row">
+                <div class="col-4"><img class="img img-fluid" src="img/Screenshot_1.png" alt="Screenshot_1.png" title="Screenshot_1"></div>
+                <div class="col-4"><img class="img img-fluid" src="img/Screenshot_2.png" alt="Screenshot_1.png" title="Screenshot_2"></div>
+                <div class="col-4"><img class="img img-fluid" src="img/Screenshot_3.png" alt="Screenshot_1.png" title="Screenshot_3"></div>
+            </div>
             <p class="text-center"><a class="btn btn-success my-btn-success text-white fw-bold" href="https://github.com/MikesDavid/Game" target="_blank">{{ __('Download', [], $locale.'-plus') }}</a></p>
         </div>
 
